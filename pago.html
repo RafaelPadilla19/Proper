@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.83.1">
+  <title>Pago</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
+
+
+
+  <!-- Bootstrap core CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+  <!-- Favicons -->
+  <meta name="theme-color" content="#7952b3">
+
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    .bg-principal {
+
+      background-color: #0074af;
+    }
+
+    .bg-con {
+      background-color: #0b83be;
+      background-attachment: fixed;
+    }
+
+    #btn {
+      background-color: #0074af;
+    }
+
+    .container {
+      max-width: 960px;
+    }
+
+    .bg-border {
+      border-radius: 80px 20px;
+    }
+
+
+    .bg-principal {
+      background-color: #0074AF;
+    }
+
+    .bg-btn1 {
+      background-color: #0074AF;
+    }
+
+    .bg-head {
+      background-color: #0074AF;
+    }
+
+    .bg-btn2 {
+      background-color: #0074AF;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="/css/style.css" rel="stylesheet">
+</head>
+<header>
+  <div class="containerl-fluid">
+    <header>
+      <div class="d-flex flex-column flex-md-row align-items-center pb-1 mb-0  bg-principal">
+        <span class="fs-2 fw-bold m-3 text-white">PROOPER</span>
+        <nav class=" mt-1 mr-4  ms-md-auto">
+          <a class="fw-bold text-white pe-4" href="index.html">Inicio </a>
+          <a class="fw-bold text-white pe-4" href="perfil.html">Perfil</a>
+          <a class="fw-bold text-white pe-5" href="inicio-sesion.html">Cerra Sesion</a>
+        </nav>
+    </header>
+
+
+  </div> <br><br> <br>
+
+</header>
+
+<body class="bg-light">
+
+  <div class="containerl-fluid">
+    <main>
+      <div class="row g-0">
+        <div class="col-md-5 col-lg-3 order-md-last">
+          <h4 class="d-flex justify-content-between align-items-center mb-4">
+            <span class="fw-bold fs-1">Tu Plan</span>
+            <span class="badge bg-principal rounded-pill">1</span>
+          </h4>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-sm">
+              <div>
+                <h6 class="my-0">Premium</h6>
+                <small class="text-muted">Suscripcion por 1 año</small>
+              </div>
+              <span class="text-muted">$100.00</span>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Total (USD)</span>
+              <strong>$100.00</strong>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-lg-3">
+        </div>
+
+        <div class="col-md-5s col-lg-4 ">
+          <form>
+            <div class="row g-3">
+              <div class="">
+                <span class="fs-0 fw-bold text-align">CONFIGURA TU TARJETA DE CREDITO O DEBITO</span><br><br>
+                <span class="fs-2 fw-bold text-align">PAGO</span><br>
+                <div class="my-1">
+                  <div class="form-check">
+                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                    <label class="form-check-label" for="credit">Tarjeta de Credito</label>
+                  </div>
+                  
+                  <div class="form-check">
+                    <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                    <label class="form-check-label" for="debit">Tarjeta de Debito</label>
+                  </div>
+                  <br>
+                </div>
+
+                <div class="col-10 ">
+                  <label for="">Seleccione el nombre de la tarjeta</label>
+                  <select class="form-select" aria-label="">
+                    <option selected>Mastercard</option>
+                    <option value="1">Visa</option>
+                    <option value="2">American Express</option>
+                    <option value="3">Visa Infinite</option>
+                  </select>
+                  </div>
+                </div>
+
+                <div class="col-10">
+                  <label for="cc-number" class="form-label">Numero de Tarjeta</label>
+                  <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                  <div class="invalid-feedback">
+                    Credit card number is required
+                  </div>
+                </div>
+
+                <div class="col-10">
+                  <label for="cc-expiration" class="form-label">Fecha de Vencimiento</label>
+                  <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                  <div class="invalid-feedback">
+                    Expiration date required
+                  </div>
+                </div>
+
+                <div class="col-10">
+                  <label for="cc-cvv" class="form-label">CVV</label>
+                  <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                  <div class="invalid-feedback">
+                    Security code required
+                  </div>
+                </div> <br>
+                <div class="col-12 ">
+                  <div class="d-flex flex-column flex-md-row align-items-center pb-1 mb-0">
+                    <span class="fs-10 fw-bold m-1 ">$100 al año <br>PLAN PREMIUM </span>
+                    <nav class=" mt-4 mr-5  ms-md-auto">
+                      <a class="fw-bold  pe-4" href="precio.html">Cambiar Plan</a>
+                    </nav>
+                  </div>
+                  <p style="text-align: justify">
+                    Al hacer clic en el botón Iniciar membresía, aceptas nuestros Términos de uso y
+                    nuestra Declaración de privacidad, declaras que tienes más de 18 años y aceptas
+                    que PROPER continuará tu membresía de manera automática y que, hasta que la canceles,
+                    te facturará el cargo anual (actualmente de $100.00) a través de la forma de pago elegida.
+                    Puedes cancelar la membresía en cualquier momento para evitar cargos en el futuro.
+                    Para hacerlo, ve a Cuenta y haz clic en Cancelar membresía
+                  </p>
+                </div> <br>
+                <button class="w-100 btn btn-primary btn-lg bg-principal" type="submit">Suscribirse a PROPER
+                  Premium</button>
+              </div>
+
+          </form>
+        </div>
+
+    </main>
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1 text">&copy; 2020–2021 PROOPER</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+      </ul>
+    </footer>
+  </div>
+  </div>
+  </div>
+</body>
+
+</html>
